@@ -6,7 +6,7 @@
             <name>CanSAT_personal</name>
             <creation-uuid>4355d38e-a079-4352-af66-76dca41e3147</creation-uuid>
             <make-project-type>0</make-project-type>
-            <c-extensions/>
+            <c-extensions>c</c-extensions>
             <cpp-extensions/>
             <header-extensions/>
             <asminc-extensions/>
