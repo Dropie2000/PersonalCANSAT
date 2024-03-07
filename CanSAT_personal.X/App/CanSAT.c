@@ -7,7 +7,8 @@
 
 
 #include <xc.h>
-
+int test;
 void main(void) {
+    
     return;
 }
