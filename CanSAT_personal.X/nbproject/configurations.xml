@@ -4,7 +4,14 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <logicalFolder name="f3" displayName="CDDs" projectFiles="true">
+        <itemPath>BME280Lib.h</itemPath>
+        <itemPath>INA219Lib.h</itemPath>
+        <itemPath>nmea_gps.h</itemPath>
+      </logicalFolder>
       <logicalFolder name="f1" displayName="ComDrv" projectFiles="true">
+        <itemPath>uart.h</itemPath>
+        <itemPath>i2c.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="IODrv" projectFiles="true">
       </logicalFolder>
@@ -19,7 +26,14 @@
       <logicalFolder name="f1" displayName="App" projectFiles="true">
         <itemPath>CanSAT.c</itemPath>
       </logicalFolder>
+      <logicalFolder name="f4" displayName="CDDs" projectFiles="true">
+        <itemPath>INA219Lib.c</itemPath>
+        <itemPath>BME280Lib.c</itemPath>
+        <itemPath>nmea_gps.c</itemPath>
+      </logicalFolder>
       <logicalFolder name="f3" displayName="ComDrv" projectFiles="true">
+        <itemPath>uart.c</itemPath>
+        <itemPath>i2c.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="IODrv" projectFiles="true">
       </logicalFolder>
