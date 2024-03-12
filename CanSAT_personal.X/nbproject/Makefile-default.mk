@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=CanSAT.c uart.c i2c.c INA219Lib.c BME280Lib.c nmea_gps.c
+SOURCEFILES_QUOTED_IF_SPACED=CanSAT.c uart.c i2c.c INA219Lib.c BME280Lib.c nmea_gps.c DI.c AI.c DO.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/CanSAT.p1 ${OBJECTDIR}/uart.p1 ${OBJECTDIR}/i2c.p1 ${OBJECTDIR}/INA219Lib.p1 ${OBJECTDIR}/BME280Lib.p1 ${OBJECTDIR}/nmea_gps.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/CanSAT.p1.d ${OBJECTDIR}/uart.p1.d ${OBJECTDIR}/i2c.p1.d ${OBJECTDIR}/INA219Lib.p1.d ${OBJECTDIR}/BME280Lib.p1.d ${OBJECTDIR}/nmea_gps.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/CanSAT.p1 ${OBJECTDIR}/uart.p1 ${OBJECTDIR}/i2c.p1 ${OBJECTDIR}/INA219Lib.p1 ${OBJECTDIR}/BME280Lib.p1 ${OBJECTDIR}/nmea_gps.p1 ${OBJECTDIR}/DI.p1 ${OBJECTDIR}/AI.p1 ${OBJECTDIR}/DO.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/CanSAT.p1.d ${OBJECTDIR}/uart.p1.d ${OBJECTDIR}/i2c.p1.d ${OBJECTDIR}/INA219Lib.p1.d ${OBJECTDIR}/BME280Lib.p1.d ${OBJECTDIR}/nmea_gps.p1.d ${OBJECTDIR}/DI.p1.d ${OBJECTDIR}/AI.p1.d ${OBJECTDIR}/DO.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/CanSAT.p1 ${OBJECTDIR}/uart.p1 ${OBJECTDIR}/i2c.p1 ${OBJECTDIR}/INA219Lib.p1 ${OBJECTDIR}/BME280Lib.p1 ${OBJECTDIR}/nmea_gps.p1
+OBJECTFILES=${OBJECTDIR}/CanSAT.p1 ${OBJECTDIR}/uart.p1 ${OBJECTDIR}/i2c.p1 ${OBJECTDIR}/INA219Lib.p1 ${OBJECTDIR}/BME280Lib.p1 ${OBJECTDIR}/nmea_gps.p1 ${OBJECTDIR}/DI.p1 ${OBJECTDIR}/AI.p1 ${OBJECTDIR}/DO.p1
 
 # Source Files
-SOURCEFILES=CanSAT.c uart.c i2c.c INA219Lib.c BME280Lib.c nmea_gps.c
+SOURCEFILES=CanSAT.c uart.c i2c.c INA219Lib.c BME280Lib.c nmea_gps.c DI.c AI.c DO.c
 
 
 
@@ -142,6 +142,30 @@ ${OBJECTDIR}/nmea_gps.p1: nmea_gps.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/nmea_gps.d ${OBJECTDIR}/nmea_gps.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/nmea_gps.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
+${OBJECTDIR}/DI.p1: DI.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/DI.p1.d 
+	@${RM} ${OBJECTDIR}/DI.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/DI.p1 DI.c 
+	@-${MV} ${OBJECTDIR}/DI.d ${OBJECTDIR}/DI.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/DI.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/AI.p1: AI.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/AI.p1.d 
+	@${RM} ${OBJECTDIR}/AI.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/AI.p1 AI.c 
+	@-${MV} ${OBJECTDIR}/AI.d ${OBJECTDIR}/AI.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/AI.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/DO.p1: DO.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/DO.p1.d 
+	@${RM} ${OBJECTDIR}/DO.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/DO.p1 DO.c 
+	@-${MV} ${OBJECTDIR}/DO.d ${OBJECTDIR}/DO.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/DO.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
 else
 ${OBJECTDIR}/CanSAT.p1: CanSAT.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
@@ -190,6 +214,30 @@ ${OBJECTDIR}/nmea_gps.p1: nmea_gps.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/nmea_gps.p1 nmea_gps.c 
 	@-${MV} ${OBJECTDIR}/nmea_gps.d ${OBJECTDIR}/nmea_gps.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/nmea_gps.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/DI.p1: DI.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/DI.p1.d 
+	@${RM} ${OBJECTDIR}/DI.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/DI.p1 DI.c 
+	@-${MV} ${OBJECTDIR}/DI.d ${OBJECTDIR}/DI.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/DI.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/AI.p1: AI.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/AI.p1.d 
+	@${RM} ${OBJECTDIR}/AI.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/AI.p1 AI.c 
+	@-${MV} ${OBJECTDIR}/AI.d ${OBJECTDIR}/AI.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/AI.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/DO.p1: DO.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/DO.p1.d 
+	@${RM} ${OBJECTDIR}/DO.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/DO.p1 DO.c 
+	@-${MV} ${OBJECTDIR}/DO.d ${OBJECTDIR}/DO.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/DO.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 

@@ -14,6 +14,9 @@
         <itemPath>i2c.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="IODrv" projectFiles="true">
+        <itemPath>AI.h</itemPath>
+        <itemPath>DO.h</itemPath>
+        <itemPath>DI.h</itemPath>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
@@ -36,6 +39,9 @@
         <itemPath>i2c.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="IODrv" projectFiles="true">
+        <itemPath>DI.c</itemPath>
+        <itemPath>AI.c</itemPath>
+        <itemPath>DO.c</itemPath>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
